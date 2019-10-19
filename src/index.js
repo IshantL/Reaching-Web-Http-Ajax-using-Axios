@@ -10,11 +10,6 @@ axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 axios.interceptors.request.use(request => {
-    debugger;
-    request.data ={
-        ...request.data,
-        author: "ishant"
-    }
     console.log(request);
     // Edit request config
     return request;
@@ -24,7 +19,6 @@ axios.interceptors.request.use(request => {
 });
 
 axios.interceptors.response.use(response => {
-    debugger;
     console.log(response);
     // Edit request config
     return response;
